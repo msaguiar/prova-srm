@@ -1,0 +1,23 @@
+<div class="container">
+	<h1>Credito</h1>
+	<form ng-submit="salvar()">
+		<div class="form-group">
+			<label for="clienteNome">Nome do Cliente</label> <input type="text"
+				class="form-control" id="clienteNome" ng-model="credito.nomeCliente"
+				ng-required="true" name="clienteNome">
+		</div>
+		<div class="form-group">
+			<label for="limite">Limite</label> <input type="text"
+				class="form-control" id="limite" ng-model="credito.limite"  currency-mask
+				ng-required="true" name="limite">
+		</div>
+		<div class="form-group">
+			<label for="risco">Risco</label> <select class="form-control"
+				ng-model="credito.riscoId" name="risco" id="risco"
+				ng-required="true"
+				ng-options=" item.id as item.nome for item in riscosList"></select>
+		</div>
+		<button type="submit" class="btn btn-success">Salvar</button>
+
+	</form>
+</div>
