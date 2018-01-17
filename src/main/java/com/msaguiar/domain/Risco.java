@@ -46,4 +46,12 @@ public class Risco implements Serializable {
 		return taxaJuros;
 	}
 
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setTaxaJuros(BigDecimal taxaJuros) {
+		this.taxaJuros = taxaJuros;
+	}
+
 }

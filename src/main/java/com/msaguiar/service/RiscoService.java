@@ -1,6 +1,6 @@
 package com.msaguiar.service;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,12 +16,12 @@ public class RiscoService {
 	private final RiscoRepository riscoRepository;
 	private RiscoMapper riscoMapper;
 
-	public RiscoService(RiscoRepository riscoRepository,RiscoMapper ricoMapper) {
+	public RiscoService(RiscoRepository riscoRepository,RiscoMapper riscoMapper) {
 		this.riscoRepository = riscoRepository;
-		this.riscoMapper = ricoMapper;
+		this.riscoMapper = riscoMapper;
 	}
 
-	public List<RiscoDTO> listar() {
+	public Collection<RiscoDTO> listar() {
 
 		return riscoMapper.mapper(riscoRepository.findAll());
 

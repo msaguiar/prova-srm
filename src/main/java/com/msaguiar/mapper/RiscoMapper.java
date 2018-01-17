@@ -6,10 +6,12 @@ import com.msaguiar.domain.Risco;
 import com.msaguiar.dto.RiscoDTO;
 
 @Service
-public class RiscoMapper extends AbstractMapper<RiscoDTO, Risco> {
+public class RiscoMapper implements Mapper<RiscoDTO, Risco> {
 
 	@Override
 	public RiscoDTO mapper(Risco risco) {
+
+		// TaxaJuros - nao houve a necessidade de transformar
 		if (risco == null) {
 			return null;
 		}

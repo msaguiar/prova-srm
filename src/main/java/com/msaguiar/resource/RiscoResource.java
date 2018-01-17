@@ -1,7 +1,8 @@
 package com.msaguiar.resource;
 
-import java.util.List;
+import java.util.Collection;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.msaguiar.dto.RiscoDTO;
 import com.msaguiar.service.RiscoService;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/risco")
 public class RiscoResource {
@@ -20,7 +22,7 @@ public class RiscoResource {
 	}
 
 	@GetMapping("/listar")
-	public List<RiscoDTO> listar() {
+	public Collection<RiscoDTO> listar() {
 		return riscoService.listar();
 	}
 

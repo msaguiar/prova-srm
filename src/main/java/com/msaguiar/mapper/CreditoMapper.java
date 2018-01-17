@@ -6,10 +6,12 @@ import com.msaguiar.domain.Credito;
 import com.msaguiar.dto.CreditoDTO;
 
 @Service
-public class CreditoMapper extends AbstractMapper<Credito, CreditoDTO> {
+public class CreditoMapper implements Mapper<Credito, CreditoDTO> {
 
 	@Override
 	public Credito mapper(CreditoDTO dto) {
+		
+		//TaxaJuros - nao houve a necessidade de transformar
 		if (dto == null) {
 			return null;
 		}
